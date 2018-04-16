@@ -2,6 +2,9 @@ C = gcc
 CFLAGS += -std=c99 -Wall -pedantic -D_DEFAULT_SOURCE -g
 INCLUDES = -I./src
 LDFLAGS = -lsnmp
+ifeq ("$(wildcard $(/etc/redhat-release))","")
+	LDFLAGS = -lnetsnmp
+endif
 OPTFLAGS = #-O3
 
 SRC = src
