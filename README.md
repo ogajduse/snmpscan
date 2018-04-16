@@ -20,10 +20,18 @@ Options:
 
 ## Compilation
 
-SNMPScan depends on net-snmp. To install development headers on Debian, install the package `libsnmp-dev`:
+SNMPScan depends on net-snmp. To install development headers on Debian, install the package `libsnmp-dev`, on RedHat family systems install the `net-snmp-devel`:
+
+### Debian
 
 ```
 sudo apt install libsnmp-dev
+```
+
+### Red Hat Enterprise Linux, CentOS, Fedora, Scientific Linux
+
+```
+sudo yum install net-snmp-devel
 ```
 
 To compile SNMPScan:
